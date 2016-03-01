@@ -1,0 +1,23 @@
+{
+  "name": "grace-hopper",
+  "homepage": "https://github.com/russpate/grace-hopper",
+  "authors": [
+    "Russell Pate <russ@russpate.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "underscore": "^1.8.3",
+    "font-awesome": "fontawesome#^4.5.0"
+  }
+}
