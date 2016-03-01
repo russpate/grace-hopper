@@ -24,7 +24,13 @@ var bandade = {
     $target.html('');
     var htmlInsert = "";
     _.each(location, function(item, idx) {
-        htmlInsert += "<p>" + "Artist: " + "</p>" + item.artists[0].name;
+        htmlInsert += "<div class = info-container>";
+        htmlInsert += "<p>" + "Artist: "  + item.artists[0].name + "</p>";
+        htmlInsert += "<p>" + "Venue: "  + item.venue.name + "</p>";
+        htmlInsert += "<p>" + "Location: "  + item.venue.city + " " + item.venue.region + "</p>";
+        htmlInsert += "<p>" + "Purchase Tickets: "  + item.ticket_url + "</p>";
+        htmlInsert += "<p>" + "Time and Data: "  + item.datetime + "</p>";
+        htmlInsert += "</div>";
     });
     $target.append(htmlInsert);
   },
