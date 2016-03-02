@@ -42,24 +42,27 @@ input#bandade-search-input {
   transition: .2s all;
   font-size: 20px;
   color: #31D8C1; }
-  input#bandade-search-input:focus {
-    outline: none;
-    background: #fff; }
+
+input#bandade-search-input:focus {
+  outline: none;
+  background: #fff; }
 
 section.search-result {
   width: 50%;
   margin: 0 auto;
   color: gray;
   font-size: 18px; }
-  section.search-result a {
-    color: #fff;
-    text-decoration: none;
-    text-decoration: none;
-    background: #31D8C1;
-    padding: 10px;
-    transition: .2s all; }
-    section.search-result a:hover {
-      background: blue; }
+
+section.search-result a {
+  color: #fff;
+  text-decoration: none;
+  text-decoration: none;
+  background: #31D8C1;
+  padding: 10px;
+  transition: .2s all; }
+
+section.search-result a:hover {
+  background: blue; }
 
 .bandade-artist {
   font-weight: 600;
@@ -68,3 +71,6 @@ section.search-result {
 
 .bandade-tix {
   text-align: right; }
+
+.inactive {
+  display: none; }

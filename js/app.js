@@ -13,8 +13,8 @@ var bandade = {
   initEvents: function () {
     $('#bandadeform').on('submit',  function (event) {
       event.preventDefault();
+      $('.search-result').removeClass('inactive');
       var searchTerm = $("#bandade-search-input").val();
-      pageNum = 1;
       var url = bandade.mainURL + searchTerm.replace(" ","+") + '&per_page=100&format=json&app_id=bandade';
       bandade.getLocationData(url);
     });
