@@ -12,11 +12,11 @@ templates.searchResultsTemplate = [
       "<%= venue.city %>",
       "<%= venue.region %>",
     "</div>",
-    "<div class='bandade-tix'><a href='",
-      "<%= ticket_url %>",
-    "'>Purchase Tickets</a></p>",
     "<div class='bandade-time-date'>When: ",
       "<%= datetime %>",
-    "</div>",
+      "<div class='bandade-tix'><a href='",
+        "<%= ticket_url %>",
+      "'>Purchase Tickets</a></p>",
+      "</div>",
   "</div>"
 ].join("");

@@ -26,7 +26,6 @@ var bandade = {
       $('.search-result').append(tmpl(el));
     });
   },
-
   getLocationData: function (url) {
     $.ajax({
       url: url,
@@ -37,10 +36,7 @@ var bandade = {
         bandade.addToDom(location, $('.main'));
       }
     });
-  },
-
-
-
+  }
 }; //end of bandade obj
 
 // apiUrl = "http://api.bandsintown.com/events/search?location=Charleston,SC&radius=20&format=json&app_id=bandade";

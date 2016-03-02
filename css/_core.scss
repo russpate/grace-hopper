@@ -4,12 +4,72 @@
   box-sizing: border-box;
 }
 body{
-  background-color:indianred;
+  background-color:#fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#31D8C1;
 }
 .container{
-  width:85%;
   margin:0 auto;
 }
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1428988449731-1e5ccfb5b84f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f513990c84aead7464c276843b5e9f16");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #00FFDC;
+  background-position: center center;
+  padding:10% 0;
+}
 .info-container {
-    margin: 30px 0;
+  margin: 30px 0;
+}
+h1{
+  font-family: 'Courgette', cursive;
+  text-align:center;
+  color:#fff;
+  margin:0;
+  margin-bottom: 3%;
+}
+form#bandadeform {
+  text-align: center;
+}
+input#bandade-search-input {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  border-radius:35px;
+  background: #fff;
+  transition:.2s all;
+  font-size:20px;
+  color:#31D8C1;
+  &:focus {
+    outline: none;
+    background: #fff;
+
+  }
+}
+section.search-result {
+  width: 50%;
+  margin: 0 auto;
+  color:gray;
+  font-size:18px;
+  a{
+    color:#fff;
+    text-decoration:none;
+    text-decoration: none;
+    background: #31D8C1;
+    padding: 10px;
+    transition:.2s all;
+    &:hover{
+      background:blue;
+    }
+  }
+}
+.bandade-artist {
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.bandade-tix {
+    text-align: right;
 }
