@@ -14,12 +14,13 @@ var bandade = {
     $('#bandadeform').on('submit',  function (event) {
       event.preventDefault();
       var searchTerm = $("#bandade-search-input").val();
-      var url = bandade.mainURL + searchTerm.replace(" ","+") + '&format=json&app_id=bandade';
+      pageNum = 1;
+      var url = bandade.mainURL + searchTerm.replace(" ","+") + '&per_page=100&format=json&app_id=bandade';
       bandade.getLocationData(url);
     });
   },
   addToDom: function (item) {
-    $('.search-result').append('');
+    $('.search-result').html('');
     _.each(item, function (el){
       console.log(el);
       var tmpl = _.template(templates.searchResultsTemplate);
