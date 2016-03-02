@@ -28,6 +28,23 @@ var bandade = {
       $('.search-result').append(tmpl(el));
     });
   },
+  // initMap: function (){
+  //   var sectMap = document.getElementsByClassName('result-map')[0];
+  //   var map = new google.maps.Map(sectMap, {
+  //      center: {lat: 32.7833, lng: -79.9333},
+  //      zoom: 8
+  //    });
+  // },
+
+  // myMap: function(el){
+  //   myData.map(function(el) {
+  //     return {
+  //       lat: el.venue.latitude,
+  //       lng: el.venue.longitude
+  //     };
+  //   });
+  // },
+
   getLocationData: function (url) {
     $.ajax({
       url: url,
@@ -35,6 +52,7 @@ var bandade = {
       dataType: 'jsonp',
       success: function (location) {
         window.glob = location;
+        // map.data.loadGeoJson(url);
         bandade.addToDom(location, $('.main'));
       }
     });
