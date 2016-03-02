@@ -19,7 +19,17 @@ var bandade = {
       bandade.getLocationData(url);
     });
   },
-
+  //
+  // This is what I was attempting for the template but
+  // wasn't able to get it to work just yet.
+  //
+  // addToDom: function (data) {
+  //   var tmpl = _.template(templates.searchResultsTemplate);
+  //   $('.searchResult').html('');
+  //   _.each(item, function (el)
+  //   {$('.searchResult').append(tmpl(el));
+  //   });
+  // },
   addToDom: function (location, $target) {
     $target.html('');
     var htmlInsert = "";
@@ -52,4 +62,3 @@ var bandade = {
 }; //end of banade obj
 
 // apiUrl = "http://api.bandsintown.com/events/search?location=Charleston,SC&radius=20&format=json&app_id=bandade";
-Status API Training Shop Blog About Pricing
