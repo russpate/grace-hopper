@@ -7,6 +7,7 @@ var bandade = {
   init: function () {
     bandade.initStyling();
     bandade.initEvents();
+    // initMap();
   },
   initStyling: function () {
   },
