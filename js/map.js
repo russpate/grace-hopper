@@ -8,7 +8,7 @@ function initMap(){
   //    zoom: 8
   //  });
   var sectMap = document.getElementsByClassName('result-map')[0];
-  var map = new google.maps.Map(sectMap, {
+  map = new google.maps.Map(sectMap, {
      center: {lat: 44.540, lng: -78.546},
      zoom: 8
    });
