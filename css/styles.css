@@ -6,6 +6,9 @@
 body {
   background-color: indianred; }
 
+.container {
+  width: 85%;
+  margin: 0 auto; }
+
 .info-container {
-  margin-bottom: 10px;
-}
+  margin: 30px 0; }
