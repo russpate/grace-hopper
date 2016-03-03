@@ -1,6 +1,7 @@
 .result-map {
   height: 300px;
-  width: 100%; }
+  width: 40%;
+  margin: 20px 0 0 10px; }
 
 * {
   margin: 0;
@@ -46,24 +47,27 @@ input#bandade-search-input {
   transition: .2s all;
   font-size: 20px;
   color: #31D8C1; }
-  input#bandade-search-input:focus {
-    outline: none;
-    background: #fff; }
+
+input#bandade-search-input:focus {
+  outline: none;
+  background: #fff; }
 
 section.search-result {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   color: gray;
   font-size: 18px; }
-  section.search-result a {
-    color: #fff;
-    text-decoration: none;
-    text-decoration: none;
-    background: #31D8C1;
-    padding: 10px;
-    transition: .2s all; }
-    section.search-result a:hover {
-      background: blue; }
+
+section.search-result a {
+  color: #fff;
+  text-decoration: none;
+  text-decoration: none;
+  background: #31D8C1;
+  padding: 10px;
+  transition: .2s all; }
+
+section.search-result a:hover {
+  background: blue; }
 
 .bandade-artist {
   font-weight: 600;
@@ -75,3 +79,19 @@ section.search-result {
 
 .inactive {
   display: none; }
+
+.filter-container {
+  width: 40%;
+  float: right;
+  margin-top: -300px; }
+
+.filter-container input {
+  margin-bottom: 20px;
+  width: 50%; }
+
+#back-button {
+  width: 200px;
+  height: 30px; }
+
+.main {
+  margin-right: 10px; }
