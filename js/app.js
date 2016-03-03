@@ -2,6 +2,7 @@ $(document).ready(function() {
   bandade.init();
 });
 var bandadeArray = "";
+var mappedArray ="";
 var bandade = {
   mainURL:'http://api.bandsintown.com/events/search?location=',
   eventLocationStore: [],
@@ -58,30 +59,22 @@ var bandade = {
   filterArtist: function () {
      event.preventDefault();
      console.log ("i'm working");
-     var artistArray = bandadeArray.filter(function (el) {
-     return $("#artist-input").val() === el.artists[0].name;
+     var artistArray = mappedArray.filter(function (el) {
+     return $("#artist-input").val() === el.artists;
    });
-     bandade.addFilterToDom (artistArray);
+     bandade.addToDom (artistArray);
      $('.search-results-info').show();
      $('#back-button').show();
      $('.search-results-info').text("Search Results for: " + '"' + $("#artist-input").val()+ '"' + " in " + $("#bandade-search-input").val());
      $('#artist-input').val('');
   },
 
-  addFilterToDom: function (item) {
-    $('.main').html('');
-    _.each(item, function (el){
-      var tmpl = _.template(templates.filterResultsTemplate);
-      $('.main').append(tmpl(el));
-    });
-  },
-
   filterVenue: function (){
       event.preventDefault();
-      var venueArray = bandadeArray.filter(function (el) {
-      return $("#venue-input").val() === el.venue.name;
+      var venueArray = mappedArray.filter(function (el) {
+      return $("#venue-input").val() === el.venue;
     });
-      bandade.addFilterToDom (venueArray);
+      bandade.addToDom(venueArray);
       $('.search-results-info').show();
       $('#back-button').show();
       $('.search-results-info').text("Search Results for: " + '"' + $("#venue-input").val()+ '"' + " in " + $("#bandade-search-input").val());
@@ -131,7 +124,8 @@ var bandade = {
         window.glob = location;
         bandadeArray = location; //creating array of all data
         // bandade.addToDom(location, $('.main'));
-        bandade.addToDom(bandade.mappedArray(location));
+        mappedArray = bandade.mappedArray(location);
+        bandade.addToDom(mappedArray);
       }
     });
   },
