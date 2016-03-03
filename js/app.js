@@ -116,8 +116,10 @@ var bandade = {
          var marker = new google.maps.Marker({
            position: coord,
            map: map,
-           title: coord.title
+           title: coord.title,
+           animation: google.maps.Animation.DROP,
          });
+         marker.addListener('click', toggleBounce);
        }),
        map.setOptions({center:bandade.eventLocationStore[0][0]})
        // reset map.setOptions with a center,
