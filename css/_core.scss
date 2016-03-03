@@ -45,11 +45,10 @@ input#bandade-search-input {
   &:focus {
     outline: none;
     background: #fff;
-
   }
 }
 section.search-result {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   color:gray;
   font-size:18px;
@@ -65,6 +64,11 @@ section.search-result {
     }
   }
 }
+h3.search-results-info {
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+}
 .bandade-artist {
     font-weight: 600;
     font-size: 22px;
@@ -73,31 +77,28 @@ section.search-result {
 .bandade-tix {
     text-align: right;
 }
-
 .inactive {
   display: none;
 }
 
 .filter-container {
-  width: 40%;
-  float: right;
-  margin-top: -300px;
-
-
+  padding: 3% 0;
+  input{
+    margin-bottom: 20px;
+    width: 33%;
+    padding:10px;
+  }
 }
-
-.filter-container input{
- margin-bottom: 20px;
- width: 50%;
-
-
+.filter-container form {
+    display: inline;
 }
-
 #back-button {
   width: 200px;
   height: 30px;
+  margin: 2% 0;
 }
-
 .main {
   margin-right: 10px;
+  width:48%;
+  display:inline-block;
 }

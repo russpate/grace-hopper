@@ -1,6 +1,14 @@
 .result-map{
   height:300px;
-  width:40%;
+  width:48%;
   margin: 20px 0 0 10px;
-
+  display: inline-block;
+  vertical-align: top;
+}
+section.result-map a {
+    color: black;
+    background: none;
+}
+section.result-map a:hover {
+    background: none;
 }

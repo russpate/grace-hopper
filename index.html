@@ -11,6 +11,7 @@
   </head>
   <body>
     <div class="container">
+
       <div class="hero">
         <h1>Band Ade</h1>
         <section class="band-search">
@@ -19,10 +20,11 @@
           </form>
         </section>
       </div>
-      <section class="result-map">
-      </section>
+
       <section class="search-result inactive">
         <div class="filter-container">
+          <button type="button" id="back-button" >back to all results</button>
+          <h3 class="search-results-info"></h3>
           <form id="artist"  method="post">
             <input type="text" name="search" value="" id="artist-input" placeholder="search artist">
           </form>
@@ -32,13 +34,15 @@
           <form id="radius"  method="post">
             <input type="text" name="search" value="" id="radius-input" placeholder="search radius(# of miles)">
           </form>
-          <button type="button" id="back-button" >back to all results</button>
-          <h3 class="search-results-info"></h3>
-        <article class="main">
-
           </div>
-        </article>
+          <div class="">
+          <article class="main">
+          </article>
+          <section class="result-map">
+          </section>
+          </div>
       </section>
+
     </div>
     <script charset="utf-8" src="bower_components/moment/moment.js"></script>
     <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
