@@ -57,14 +57,23 @@ var bandade = {
 
   filterArtist: function () {
      event.preventDefault();
+     console.log ("i'm working");
      var artistArray = bandadeArray.filter(function (el) {
      return $("#artist-input").val() === el.artists[0].name;
    });
-     bandade.addToDom (artistArray);
+     bandade.addFilterToDom (artistArray);
      $('.search-results-info').show();
      $('#back-button').show();
      $('.search-results-info').text("Search Results for: " + '"' + $("#artist-input").val()+ '"' + " in " + $("#bandade-search-input").val());
      $('#artist-input').val('');
+  },
+
+  addFilterToDom: function (item) {
+    $('.main').html('');
+    _.each(item, function (el){
+      var tmpl = _.template(templates.filterResultsTemplate);
+      $('.main').append(tmpl(el));
+    });
   },
 
   filterVenue: function (){
@@ -72,7 +81,7 @@ var bandade = {
       var venueArray = bandadeArray.filter(function (el) {
       return $("#venue-input").val() === el.venue.name;
     });
-      bandade.addToDom (venueArray);
+      bandade.addFilterToDom (venueArray);
       $('.search-results-info').show();
       $('#back-button').show();
       $('.search-results-info').text("Search Results for: " + '"' + $("#venue-input").val()+ '"' + " in " + $("#bandade-search-input").val());
@@ -133,7 +142,7 @@ var bandade = {
      method: 'GET',
      dataType: 'jsonp',
      success: function (radius) {
-       bandade.addToDom(radius, $('.main'));
+       bandade.addToDom(bandade.mappedArray(radius));
      }
    });
  },
