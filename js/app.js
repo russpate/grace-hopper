@@ -60,7 +60,7 @@ var bandade = {
      event.preventDefault();
      console.log ("i'm working");
      var artistArray = mappedArray.filter(function (el) {
-     return $("#artist-input").val() === el.artists;
+     return $("#artist-input").val().toLowerCase() === el.artists.toLowerCase();
    });
      bandade.addToDom (artistArray);
      $('.search-results-info').show();
@@ -72,7 +72,7 @@ var bandade = {
   filterVenue: function (){
       event.preventDefault();
       var venueArray = mappedArray.filter(function (el) {
-      return $("#venue-input").val() === el.venue;
+      return $("#venue-input").val().toLowerCase() === el.venue.toLowerCase();
     });
       bandade.addToDom(venueArray);
       $('.search-results-info').show();
