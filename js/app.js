@@ -17,12 +17,15 @@ var bandade = {
     $('#artist').on('submit', bandade.filterArtist);
     $('#venue').on('submit', bandade.filterVenue);
     $('#radius').on('submit', bandade.filterRadius);
+    $('#back-button').on('click', bandade.backButton);
   },
 
   locationSearch: function () {
     event.preventDefault();
     $('.search-result').removeClass('inactive');
     bandade.getLocationData(bandade.createLocationURL());
+    $('.search-results-info').text("All shows for: " + '"' + $("#bandade-search-input").val() + '"');
+    $('#back-button').hide();
   },
 
   createLocationURL: function () {
@@ -45,6 +48,10 @@ var bandade = {
      return $("#artist-input").val() === el.artists[0].name;
    });
      bandade.addToDom (artistArray);
+     $('.search-results-info').show();
+     $('#back-button').show();
+     $('.search-results-info').text("Search Results for: " + '"' + $("#artist-input").val()+ '"' + " in " + $("#bandade-search-input").val());
+     $('#artist-input').val('');
   },
 
   filterVenue: function (){
@@ -53,24 +60,31 @@ var bandade = {
       return $("#venue-input").val() === el.venue.name;
     });
       bandade.addToDom (venueArray);
+      $('.search-results-info').show();
+      $('#back-button').show();
+      $('.search-results-info').text("Search Results for: " + '"' + $("#venue-input").val()+ '"' + " in " + $("#bandade-search-input").val());
+      $('#venue-input').val('');
   },
 
   filterRadius: function (){
     event.preventDefault();
     var radiusSearch = $('#radius-input').val();
     var finalLocation = bandade.createLocationURL();
-    var radiusURL = finalLocation + "&radius=" + radiusSearch;
+    var radiusURL = finalLocation + "&radius=" + radiusSearch.replace(" miles","");
     bandade.getVenueData(radiusURL);
+    $('.search-results-info').show();
+    $('#back-button').show();
+    $('.search-results-info').text("Radius Search Results: " + '"' + $("#radius-input").val()+ '"');
+    $('#radius-input').val('');
 
   },
 
-  // filterArtists: function () {
-  //     event.preventDefault();
-  //      var artistSearch = $('#artist-input').val();
-  //      var finalLocation = bandade.createLocationURL();
-  //      var artistURL = finalLocation + "&artists[]=" + artistSearch.replace(" ","");
-  //      bandade.getArtistData(artistURL);
-  //  },
+  backButton: function () {
+    event.preventDefault();
+    $('.search-results-info').hide();
+    bandade.locationSearch();
+  },
+
 
   getLocationData: function (url) {
     $.ajax({
