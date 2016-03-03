@@ -61,7 +61,6 @@ var bandade = {
     var finalLocation = bandade.createLocationURL();
     var radiusURL = finalLocation + "&radius=" + radiusSearch;
     bandade.getVenueData(radiusURL);
-
   },
 
   // filterArtists: function () {
@@ -91,7 +90,7 @@ var bandade = {
            title: coord.title
          });
        }),
-       map.setOptions({center:bandade.eventLocationStore[0][0]})
+       map.setOptions({center:bandade.eventLocationStore[0][0]});
        // reset map.setOptions with a center,
         window.glob = location;
         bandadeArray = location; //creating array of all data
