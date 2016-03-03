@@ -19,7 +19,20 @@ var bandade = {
     $('#radius').on('submit', bandade.filterRadius);
     $('#back-button').on('click', bandade.backButton);
   },
-
+  mappedArray: function(arr){
+    return arr.map(function (el) {
+      return{
+        artists: el.artists[0].name,
+        datetime: moment.utc(el.datetime).format("MMM Do, YYYY"),
+        ticket_url: el.ticket_url,
+        venue: el.venue.name,
+        latitude: el.venue.latitude,
+        longitude: el.venue.longitude,
+        city: el.venue.city,
+        region: el.venue.region
+      };
+    });
+  },
   locationSearch: function () {
     event.preventDefault();
     $('.search-result').removeClass('inactive');
@@ -85,7 +98,6 @@ var bandade = {
     bandade.locationSearch();
   },
 
-
   getLocationData: function (url) {
     $.ajax({
       url: url,
@@ -109,7 +121,8 @@ var bandade = {
        // reset map.setOptions with a center,
         window.glob = location;
         bandadeArray = location; //creating array of all data
-        bandade.addToDom(location, $('.main'));
+        // bandade.addToDom(location, $('.main'));
+        bandade.addToDom(bandade.mappedArray(location));
       }
     });
   },
