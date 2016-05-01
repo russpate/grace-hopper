@@ -3,16 +3,42 @@
   #artist, #radius {
     padding-right: 0;
   }
+  .info-container{
+    padding:5% 2% 0 2%;
+  }
+  .filter-container{
+    h3{
+      margin-bottom: 3%;
+    }
+    #back-button {
+      margin: 4% 0;
+    }
+  }
+  #artist {
+    padding-right: 1%;
+  }
+  #radius {
+    padding-left: 1%;
+  }
+  #venue{
+    padding:0 .5%;
+  }
 }
 
 // device size sm
 @media only screen and (max-width:47.875em) {
-  #artist, #radius {
-    padding-right: 0;
+  #artist, #radius, #venue {
+    padding: 0;
   }
   .main{
     padding: 0;
     margin:5% 0;
+  }
+  .map-wrap {
+    padding: 15px;
+  }
+  .info-container{
+    margin:15px;
   }
 }
 
@@ -21,13 +47,11 @@
   #bandade-search-input{
     padding:3%;
   }
-  #artist, #radius {
-    padding-right: 0;
-  }
   .main{
     padding: 0;
   }
   button{
     width: 100%;
   }
+
 }

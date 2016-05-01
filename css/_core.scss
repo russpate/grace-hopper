@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body{
-  background-color:#fff;
-  font-family: 'Roboto Condensed', sans-serif;
+  background-color:#f7f7f7;
+  font-family: 'Work Sans', sans-serif;
   color:#31D8C1;
 }
 .container{
@@ -30,15 +30,20 @@ body{
 .hero-inner{
   width:75%;
 }
-
 .info-container {
   margin-bottom:2%;
   display: flex;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 5% 2% 0 2%;
+  padding: 3% 2%;
   background:#f1f1f1;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16);
+  font-size: 1.5rem;
+}
+.tix-wrap{
+  text-align:right;
 }
 button {
   -webkit-appearance: none;
@@ -50,6 +55,9 @@ button {
   color:white;
   &:hover {
     background: blue;
+  }
+  &:focus{
+    outline:none;
   }
 }
 h1{
@@ -70,7 +78,7 @@ form#bandadeform {
   border-radius:35px;
   background: #fff;
   transition:.2s all;
-  font-size:20px;
+  font-size:2rem;
   color:#31D8C1;
   &:focus {
     outline: none;
@@ -83,32 +91,46 @@ form#bandadeform {
 }
 .bandade-artist {
   font-weight: 600;
-  font-size: 22px;
   padding-bottom: 10px;
-}
-.bandade-tix {
 }
 .inactive {
   display: none;
 }
-#artist, #radius {
-    padding-right: 3%;
+#artist {
+  padding-right: 1%;
+}
+#radius {
+  padding-left: 1%;
+}
+#venue{
+  padding:0 .5%;
 }
 .filter-container {
-  margin: 2% 0 3% 0;
+  margin: 2% 0;
   h3 {
-    padding: 2% 3%;
+    padding: 1%;
     font-size: 1.5rem;
     text-transform: lowercase;
     font-weight: 100;
     background: #D7F5F1;
     color: #31D8C1;
-    margin: 3% 0;
+    margin: 1% 0;
+  }
+  #back-button{
+    margin:0;
   }
   input{
     margin-bottom: 20px;
     width: 100%;
     padding:10px;
+    -webkit-appearance:none;
+    border:2px solid #D6D6D6;
+    font-size:1.5rem;
+    &:focus {
+      outline: none;
+      border: 2px solid #31D8C1;
+      color: #31d8c1;
+    }
   }
   form {
     padding-left: 0;

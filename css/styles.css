@@ -4,8 +4,8 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #fff;
-  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #f7f7f7;
+  font-family: 'Work Sans', sans-serif;
   color: #31D8C1; }
 
 .container {
@@ -34,8 +34,14 @@ body {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 5% 2% 0 2%;
-  background: #f1f1f1; }
+  padding: 3% 2%;
+  background: #f1f1f1;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.16);
+  font-size: 1.5rem; }
+
+.tix-wrap {
+  text-align: right; }
 
 button {
   -webkit-appearance: none;
@@ -47,6 +53,8 @@ button {
   color: white; }
   button:hover {
     background: blue; }
+  button:focus {
+    outline: none; }
 
 h1 {
   font-family: 'Courgette', cursive;
@@ -66,7 +74,7 @@ form#bandadeform {
   border-radius: 35px;
   background: #fff;
   transition: .2s all;
-  font-size: 20px;
+  font-size: 2rem;
   color: #31D8C1; }
   #bandade-search-input:focus {
     outline: none;
@@ -78,29 +86,43 @@ form#bandadeform {
 
 .bandade-artist {
   font-weight: 600;
-  font-size: 22px;
   padding-bottom: 10px; }
 
 .inactive {
   display: none; }
 
-#artist, #radius {
-  padding-right: 3%; }
+#artist {
+  padding-right: 1%; }
+
+#radius {
+  padding-left: 1%; }
+
+#venue {
+  padding: 0 .5%; }
 
 .filter-container {
-  margin: 2% 0 3% 0; }
+  margin: 2% 0; }
   .filter-container h3 {
-    padding: 2% 3%;
+    padding: 1%;
     font-size: 1.5rem;
     text-transform: lowercase;
     font-weight: 100;
     background: #D7F5F1;
     color: #31D8C1;
-    margin: 3% 0; }
+    margin: 1% 0; }
+  .filter-container #back-button {
+    margin: 0; }
   .filter-container input {
     margin-bottom: 20px;
     width: 100%;
-    padding: 10px; }
+    padding: 10px;
+    -webkit-appearance: none;
+    border: 2px solid #D6D6D6;
+    font-size: 1.5rem; }
+    .filter-container input:focus {
+      outline: none;
+      border: 2px solid #31D8C1;
+      color: #31d8c1; }
   .filter-container form {
     padding-left: 0;
     padding-right: 0; }
@@ -124,20 +146,34 @@ form#bandadeform {
 
 @media only screen and (max-width: 54.9375em) {
   #artist, #radius {
-    padding-right: 0; } }
+    padding-right: 0; }
+  .info-container {
+    padding: 5% 2% 0 2%; }
+  .filter-container h3 {
+    margin-bottom: 3%; }
+  .filter-container #back-button {
+    margin: 4% 0; }
+  #artist {
+    padding-right: 1%; }
+  #radius {
+    padding-left: 1%; }
+  #venue {
+    padding: 0 .5%; } }
 
 @media only screen and (max-width: 47.875em) {
-  #artist, #radius {
-    padding-right: 0; }
+  #artist, #radius, #venue {
+    padding: 0; }
   .main {
     padding: 0;
-    margin: 5% 0; } }
+    margin: 5% 0; }
+  .map-wrap {
+    padding: 15px; }
+  .info-container {
+    margin: 15px; } }
 
 @media screen and (max-width: 40em) {
   #bandade-search-input {
     padding: 3%; }
-  #artist, #radius {
-    padding-right: 0; }
   .main {
     padding: 0; }
   button {
