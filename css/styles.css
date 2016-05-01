@@ -180,6 +180,8 @@ form#bandadeform {
     margin: 15px; } }
 
 @media screen and (max-width: 40em) {
+  .hero-inner {
+    width: 100%; }
   #bandade-search-input {
     padding: 3%; }
   .main {

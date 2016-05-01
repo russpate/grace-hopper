@@ -44,6 +44,9 @@
 
 // device size xs
 @media screen and (max-width: 40em) {
+  .hero-inner{
+    width:100%;
+  }
   #bandade-search-input{
     padding:3%;
   }
