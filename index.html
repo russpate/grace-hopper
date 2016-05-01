@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/styles.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <div class="row">
+    <div class="page-wrapper">
 
       <div class="hero col-xs-12">
         <div class="hero-inner">
@@ -25,27 +25,27 @@
       </div>
 
       <section class="search-result container inactive">
-        <div class="filter-container col-xs-12 col-sm-12">
-          <button type="button" id="back-button" >back to all results</button>
-          <h3 class="search-results-info"></h3>
-          <form id="artist"  method="post" class="col-xs-12 col-sm-4">
-            <input type="text" name="search" value="" id="artist-input" placeholder="search artist">
-          </form>
-          <form id="venue"  method="post" class="col-xs-12 col-sm-4">
-            <input type="text" name="search" value="" id="venue-input" placeholder="search venue">
-          </form>
-          <form id="radius"  method="post" class="col-xs-12 col-sm-4">
-            <input type="text" name="search" value="" id="radius-input" placeholder="search radius(# of miles)">
-          </form>
+        <div class="map-wrap col-sm-4 col-xs-12">
+          <div class="result-map col-xs-12">
           </div>
-          <div class="results-wrap">
-            <div class="map-wrap col-sm-4 col-xs-12">
-              <div class="result-map col-xs-12">
-              </div>
+        </div>
+        <div class="results-wrap col-sm-8 col-xs-12">
+          <div class="filter-container col-xs-12 col-sm-12">
+            <button type="button" id="back-button" >back to all results</button>
+            <h3 class="search-results-info"></h3>
+            <form id="artist"  method="post" class="col-xs-12 col-sm-4">
+              <input type="text" name="search" value="" id="artist-input" placeholder="search artist">
+            </form>
+            <form id="venue"  method="post" class="col-xs-12 col-sm-4">
+              <input type="text" name="search" value="" id="venue-input" placeholder="search venue">
+            </form>
+            <form id="radius"  method="post" class="col-xs-12 col-sm-4">
+              <input type="text" name="search" value="" id="radius-input" placeholder="search radius(# of miles)">
+            </form>
             </div>
-            <article class="main col-sm-8 col-xs-12">
-            </article>
-          </div>
+          <article class="main col-xs-12">
+          </article>
+        </div>
       </section>
 
     </div>
@@ -53,6 +53,7 @@
     <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
 
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
     <script type="text/javascript" src="js/templates.js"></script>
     <script src="js/map.js"></script>
 

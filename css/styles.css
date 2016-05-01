@@ -131,10 +131,17 @@ form#bandadeform {
   display: inline-block;
   height: auto; }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+
 .result-map {
   height: 300px;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  z-index: 1000 !important; }
   .result-map a {
     color: black;
     background: none; }
@@ -142,7 +149,8 @@ form#bandadeform {
       background: none; }
 
 .map-wrap {
-  padding-right: .5%; }
+  padding-right: .5%;
+  margin: 2% 0; }
 
 @media only screen and (max-width: 54.9375em) {
   #artist, #radius {
@@ -177,4 +185,6 @@ form#bandadeform {
   .main {
     padding: 0; }
   button {
-    width: 100%; } }
+    width: 100%; }
+  .result-map {
+    height: 200px; } }

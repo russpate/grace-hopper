@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('.result-map').sticky({topSpacing:15});
   bandade.init();
 });
 var bandadeArray = "";

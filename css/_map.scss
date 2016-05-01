@@ -2,6 +2,7 @@
   height:300px;
   display: inline-block;
   vertical-align: top;
+  z-index: 1000 !important;
   a {
     color: black;
     background: none;
@@ -12,4 +13,5 @@
 }
 .map-wrap {
   padding-right: .5%;
+  margin:2% 0;
 }
