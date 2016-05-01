@@ -1,0 +1,33 @@
+// device size md
+@media only screen and (max-width:54.9375em) {
+  #artist, #radius {
+    padding-right: 0;
+  }
+}
+
+// device size sm
+@media only screen and (max-width:47.875em) {
+  #artist, #radius {
+    padding-right: 0;
+  }
+  .main{
+    padding: 0;
+    margin:5% 0;
+  }
+}
+
+// device size xs
+@media screen and (max-width: 40em) {
+  #bandade-search-input{
+    padding:3%;
+  }
+  #artist, #radius {
+    padding-right: 0;
+  }
+  .main{
+    padding: 0;
+  }
+  button{
+    width: 100%;
+  }
+}

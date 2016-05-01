@@ -39,6 +39,7 @@ var bandade = {
     $('.search-result').removeClass('inactive');
     bandade.getLocationData(bandade.createLocationURL());
     $('.search-results-info').text("All shows for: " + '"' + $("#bandade-search-input").val() + '"');
+    $('.hero').fadeIn().css('height','25vh');
     $('#back-button').hide();
   },
 

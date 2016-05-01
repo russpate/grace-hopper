@@ -11,6 +11,8 @@ body{
 .container{
   margin:0 auto;
 }
+
+// flexbox vertical centering method from the blog of Philip Walton https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
 .hero {
   background-image: url("https://images.unsplash.com/photo-1428988449731-1e5ccfb5b84f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f513990c84aead7464c276843b5e9f16");
   background-size: cover;
@@ -18,9 +20,37 @@ body{
   background-color: #00FFDC;
   background-position: center center;
   padding:10% 0;
+  height:100vh;
+  transition:.5s all;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
 }
+.hero-inner{
+  width:75%;
+}
+
 .info-container {
-  margin: 30px 0;
+  margin-bottom:2%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5% 2% 0 2%;
+  background:#f1f1f1;
+}
+button {
+  -webkit-appearance: none;
+  border: none;
+  background: #31d8c1;
+  padding: 10px 15px;
+  margin:5% 0;
+  transition: .2s all;
+  color:white;
+  &:hover {
+    background: blue;
+  }
 }
 h1{
   font-family: 'Courgette', cursive;
@@ -32,7 +62,7 @@ h1{
 form#bandadeform {
   text-align: center;
 }
-input#bandade-search-input {
+#bandade-search-input {
   width: 50%;
   padding: 20px;
   text-align: center;
@@ -47,58 +77,45 @@ input#bandade-search-input {
     background: #fff;
   }
 }
-section.search-result {
-  width: 90%;
-  margin: 0 auto;
+.search-result {
   color:gray;
   font-size:18px;
-  a{
-    color:#fff;
-    text-decoration:none;
-    text-decoration: none;
-    background: #31D8C1;
-    padding: 10px;
-    transition:.2s all;
-    &:hover{
-      background:blue;
-    }
-  }
-}
-h3.search-results-info {
-    padding: 10px 0;
-    font-weight: 400;
-    font-size: 16px;
 }
 .bandade-artist {
-    font-weight: 600;
-    font-size: 22px;
-    padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 22px;
+  padding-bottom: 10px;
 }
 .bandade-tix {
-    text-align: right;
 }
 .inactive {
   display: none;
 }
-
+#artist, #radius {
+    padding-right: 3%;
+}
 .filter-container {
-  padding: 3% 0;
+  margin: 2% 0 3% 0;
+  h3 {
+    padding: 2% 3%;
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    font-weight: 100;
+    background: #D7F5F1;
+    color: #31D8C1;
+    margin: 3% 0;
+  }
   input{
     margin-bottom: 20px;
-    width: 33%;
+    width: 100%;
     padding:10px;
   }
-}
-.filter-container form {
-    display: inline;
-}
-#back-button {
-  width: 200px;
-  height: 30px;
-  margin: 2% 0;
+  form {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .main {
-  margin-right: 10px;
-  width:48%;
   display:inline-block;
+  height:auto;
 }
